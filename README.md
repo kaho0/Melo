@@ -1,37 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tech Learning Assistant
 
-## Getting Started
+A modern, responsive AI chat interface powered by Google's Gemini API for technical learning assistance. Built with Next.js and Tailwind CSS.
 
-First, run the development server:
+![Tech Learning Assistant](public/preview.png)
 
+## 🚀 Features
+
+- **Interactive AI Chat**
+  - Real-time responses from Gemini AI
+  - Code syntax highlighting
+  - Markdown-style formatting
+  - Copy code functionality
+
+- **Smart UI**
+  - Responsive design for all devices
+  - Collapsible sidebar
+  - Chat history management
+  - Dark theme interface
+
+- **Learning Tools**
+  - Simple/Complex explanation toggle
+  - Category-based suggestions
+  - Quick access to common questions
+  - Code-focused responses
+
+- **Categories Covered**
+  - Web Development
+  - AI & Machine Learning
+  - Data Science
+  - General Science
+  - Programming
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js, React, Tailwind CSS
+- **AI**: Google Gemini API
+- **Icons**: React Icons
+- **Styling**: Tailwind Typography
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/tech-learning-assistant.git
+cd tech-learning-assistant
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+# Add your Gemini API key to .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+## 💡 Usage
 
-To learn more about Next.js, take a look at the following resources:
+1. Select a category or start a new chat
+2. Type your technical question
+3. Toggle 'Simple Mode' for easier explanations
+4. Use suggestion buttons for quick queries
+5. Copy code snippets with one click
+6. Access chat history from the sidebar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔑 Key Components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `ChatInterface`: Main chat component with message handling
+- `LoadingDots`: Loading animation component
+- `geminiApi`: API integration utility
 
-## Deploy on Vercel
+## 📱 Responsive Design
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Desktop: Full sidebar with chat history
+- Tablet: Collapsible sidebar
+- Mobile: Optimized layout with hidden sidebar
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Melo-
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Built with ❤️ for developers and learners
