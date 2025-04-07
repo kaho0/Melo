@@ -54,13 +54,31 @@ npm install
 3. Set up environment variables:
 ```bash
 cp .env.example .env.local
-# Add your Gemini API key to .env.local
 ```
 
-4. Run the development server:
+4. Configure your environment variables in `.env.local`:
+```env
+# Gemini API Configuration
+NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
+NEXT_PUBLIC_GEMINI_API_URL=https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent
+
+# Application Configuration
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
+
+To get your Gemini API key:
+1. Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Sign in with your Google account
+3. Click "Create API Key"
+4. Copy the generated key
+5. Paste it in your `.env.local` file
+
+5. Run the development server:
 ```bash
 npm run dev
 ```
+
+The application will be available at [http://localhost:3000](http://localhost:3000)
 
 ## 💡 Usage
 
@@ -83,14 +101,12 @@ npm run dev
 - Tablet: Collapsible sidebar
 - Mobile: Optimized layout with hidden sidebar
 
-## 🤝 Contributing
+## 🔒 Environment Variables
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+The following environment variables are required:
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Built with ❤️ for developers and learners
+| Variable | Description | Example |
+|----------|-------------|---------|
+| `NEXT_PUBLIC_GEMINI_API_KEY` | Your Gemini API key | `AIzaSyC...` |
+| `NEXT_PUBLIC_GEMINI_API_URL` | Gemini API endpoint | `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent` |
+| `NEXT_PUBLIC_APP_URL` | Your application URL | `http://localhost:3000` |
