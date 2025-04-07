@@ -1,18 +1,33 @@
 'use client';
-import { useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
-import ChatInterface from '../../components/ChatInterface';
 
-export default function ChatPage() {
+import { Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
+import ChatInterface from '@/components/ChatInterface';
+
+function ChatContent() {
   const searchParams = useSearchParams();
-  const initialQuery = searchParams.get('query');
   const category = searchParams.get('category');
+  const initialQuery = searchParams.get('query');
 
   return (
-    <div className="min-h-screen bg-gray-900">
-      
+    <ChatInterface 
+      category={category} 
+      initialQuery={initialQuery}
+    />
+  );
+}
 
-      <ChatInterface initialQuery={initialQuery} category={category} />
-    </div>
+export default function ChatPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex h-screen items-center justify-center bg-gray-900 text-white">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto mb-4"></div>
+          <p>Loading chat...</p>
+        </div>
+      </div>
+    }>
+      <ChatContent />
+    </Suspense>
   );
 } 
